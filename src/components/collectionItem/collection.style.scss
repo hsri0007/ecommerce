@@ -1,0 +1,61 @@
+.collection-item {
+  position: relative;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  align-items: center;
+  cursor: pointer;
+
+  .c-button {
+    position: absolute;
+    top: 270px;
+    display: none;
+    border: 1px solid black;
+    background: white;
+    padding: 10px 20px;
+    transition: all 200ms ease-in-out;
+  }
+
+  &:hover {
+    .image {
+      opacity: 0.8;
+    }
+    .c-button {
+      display: flex;
+
+      &:hover {
+        background: rgb(0, 0, 0);
+        color: white;
+        transform: scale(1.1);
+        box-shadow: 0 3px 9x white;
+        z-index: 3;
+      }
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 95%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+  }
+
+  .collection-footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+
+    .name {
+      width: 90%;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      width: 10%;
+    }
+  }
+}

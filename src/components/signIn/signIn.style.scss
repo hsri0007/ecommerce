@@ -1,0 +1,17 @@
+.form {
+  flex: 1;
+  border: 2px solid black;
+  margin-right: 20px;
+}
+
+.inputflex {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 80px;
+}
+
+input {
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,26 @@
+.cart-drop {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 340px;
+  width: 300px;
+  border: 2px solid black;
+  background-color: white;
+  right: 0;
+  z-index: 5;
+  padding: 20px;
+
+  .cart-menu {
+    height: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .cart-button {
+    margin-top: auto;
+  }
+}

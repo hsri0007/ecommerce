@@ -1,11 +1,12 @@
 .collection-item {
   position: relative;
-  width: 22%;
+  width: 22vw;
   display: flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
   cursor: pointer;
+  margin: 6px;
 
   .c-button {
     position: absolute;

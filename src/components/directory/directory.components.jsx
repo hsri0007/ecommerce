@@ -7,13 +7,16 @@ import { directorySelector } from "../../redux/directory/directory.select";
 
 const directory = ({ section }) => (
   <div className="directory-menu">
-    {section.map(({ id, title, imageUrl, size }) => {
+    {section.map(({ id, title, imageUrl, size, linkUrl, history, match }) => {
       return (
         <Menuitem
           key={id}
           title={title}
           imageUrl={imageUrl}
           size={size}
+          linkUrl={linkUrl}
+          history={history}
+          match={match}
         />
       );
     })}

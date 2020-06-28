@@ -29,12 +29,15 @@ const Header = ({ currentUser, hidden, cartAction, cartIcon }) => (
           : (
             <Link to="/sign">SignIn</Link>
           )}
-        <div onClick={cartAction} className="cart-icon">
+        <div
+          onClick={cartAction}
+          className="cart-icon"
+        >
           {cartIcon}
         </div>
       </ul>
     </nav>
-    {hidden ? null : <Cartdrop />}
+    {hidden ? <Cartdrop /> : null}
   </header>
 );
 

@@ -16,7 +16,7 @@ export default class Signup extends Component {
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         email,
-        password,
+        password
       );
 
       await createUserProfile(user, { displayName });
@@ -42,6 +42,7 @@ export default class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.displayName}
             required
+            placeholder="displayName"
           />
           <input
             type="email"
@@ -49,6 +50,7 @@ export default class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.email}
             required
+            placeholder="email"
           />
           <input
             type="password"
@@ -56,6 +58,7 @@ export default class Signup extends Component {
             onChange={this.handleChange}
             value={this.state.password}
             required
+            placeholder="password"
           />
           <input type="submit" />
         </form>

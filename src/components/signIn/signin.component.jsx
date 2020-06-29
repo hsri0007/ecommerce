@@ -35,12 +35,14 @@ export default class signin extends Component {
             name="email"
             onChange={this.onChange}
             value={this.state.email}
+            placeholder="email"
           />
           <input
             type="password"
             name="password"
             onChange={this.onChange}
             value={this.state.password}
+            placeholder="password"
           />
           <div>
             <input type="submit" />

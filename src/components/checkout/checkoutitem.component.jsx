@@ -28,9 +28,7 @@ const Check = ({ cartItem, clearItem, removeItem, addItem }) => {
             &#10095;
           </div>
         </div>
-        <div className="price">
-          {price}
-        </div>
+        <div className="price">{price}</div>
         <div className="remove-button" onClick={() => clearItem(cartItem)}>
           x
         </div>

@@ -5,6 +5,7 @@ import { auth } from "../../firebase.utils";
 import { connect } from "react-redux";
 import Cartdrop from "../cart/cartdrop.component";
 import { cartAction } from "../../redux/cart/cart.action";
+import cart from "./cart.svg";
 import {
   selectCartItemsCount,
   selectCartHidden,
@@ -20,20 +21,16 @@ const Header = ({ currentUser, hidden, cartAction, cartIcon }) => (
       </Link>
       <ul className="nav-items">
         <Link to="/shop">Shop</Link>
-        {currentUser
-          ? (
-            <button onClick={() => auth.signOut()} className="signs">
-              SignOut
-            </button>
-          )
-          : (
-            <Link to="/sign">SignIn</Link>
-          )}
-        <div
-          onClick={cartAction}
-          className="cart-icon"
-        >
-          {cartIcon}
+        {currentUser ? (
+          <button onClick={() => auth.signOut()} className="signs">
+            SignOut
+          </button>
+        ) : (
+          <Link to="/sign">SignIn</Link>
+        )}
+        <div onClick={cartAction} className="cart-icon">
+          <img src={cart} alt="cart" className="cart-image" />
+          {cartIcon ? <div className="cart-position">{cartIcon}</div> : null}
         </div>
       </ul>
     </nav>

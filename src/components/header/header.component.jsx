@@ -34,7 +34,7 @@ const Header = ({ currentUser, hidden, cartAction, cartIcon }) => (
         </div>
       </ul>
     </nav>
-    {hidden ? <Cartdrop /> : null}
+    {hidden ? null : <Cartdrop />}
   </header>
 );
 

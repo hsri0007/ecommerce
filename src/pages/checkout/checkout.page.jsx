@@ -11,11 +11,26 @@ import Check from "../../components/checkout/checkoutitem.component";
 const check = ({ cartItems, Total }) => (
   <div className="checkpage">
     <div className="checkheader">
-      <div className="checkitems">product</div>
-      <div className="checkitems">description</div>
-      <div className="checkitems">quantity</div>
-      <div className="checkitems">price</div>
-      <div className="checkitems">remove</div>
+      <div className="checkitems">
+        {" "}
+        <h3>product</h3>
+      </div>
+      <div className="checkitems">
+        {" "}
+        <h3>description </h3>
+      </div>
+      <div className="checkitems">
+        {" "}
+        <h3>quantity</h3>
+      </div>
+      <div className="checkitems">
+        {" "}
+        <h3>price </h3>
+      </div>
+      <div className="checkitems">
+        {" "}
+        <h3>remove </h3>
+      </div>
     </div>
     <div>
       {cartItems.map((cartItem) => (

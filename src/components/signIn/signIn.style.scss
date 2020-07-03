@@ -1,17 +1,32 @@
 .form {
-  flex: 1;
-  border: 2px solid black;
-  margin-right: 20px;
-}
-
-.inputflex {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  padding: 50px 80px;
+
+  background-color: white;
 }
 
-input {
-  padding: 20px;
-  width: 100%;
-  margin-bottom: 20px;
+.forms {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 40vh;
+  margin: auto;
+  .inputs {
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+  .submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
+    .submit-btn {
+      padding: 10px 0;
+
+      background: rgb(0, 0, 0);
+      cursor: pointer;
+      color: white;
+    }
+  }
 }

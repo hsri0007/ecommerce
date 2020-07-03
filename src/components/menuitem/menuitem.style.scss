@@ -2,7 +2,7 @@
   height: 250px;
   min-width: 32%;
   flex: 1 1 auto;
-  border: 1px solid black;
+  border: 1px solid rgba(221, 161, 31, 0.418);
   margin: 0 7.5px 15px;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
       transition: all 0.5s ease-in-out;
     }
     .content {
-      opacity: 0.9;
+      opacity: 0.8;
     }
   }
 
@@ -29,9 +29,13 @@
   }
 
   &.large {
-    height: 350px;
+    height: 250px;
   }
-
+  .sub-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
   .content {
     height: 90px;
     padding: 0 25px;
@@ -41,12 +45,13 @@
     justify-content: center;
     border: 1px solid black;
     position: absolute;
-    background-color: whitesmoke;
-    opacity: 0.7;
+    background-color: black;
+    opacity: 0.8;
 
-    .title {
-      font-size: 30px;
-      font-weight: bold;
+    .title-hub {
+      color: rgb(255, 166, 0);
+      font-size: 3rem;
+      font-weight: 300;
     }
   }
 }

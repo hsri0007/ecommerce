@@ -15,7 +15,7 @@ const Menuitem = ({ id, title, imageUrl, size, linkUrl, history, match }) => (
       }}
     />
     <div className="content">
-      <h3 className="title">{title}</h3>
+      <h3 className="title-hub">{title}</h3>
       <span className="sub-title">shopnow</span>
     </div>
   </div>

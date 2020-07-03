@@ -9,6 +9,7 @@ import { auth, createUserProfile } from "./firebase.utils";
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.action";
 import Checkoutpage from "./pages/checkout/checkout.page";
+import { withRouter } from "react-router-dom";
 
 class App extends Component {
   unSubscribe = null;
@@ -35,7 +36,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="back-ground">
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
@@ -44,7 +45,8 @@ class App extends Component {
           <Route
             path="/sign"
             render={() =>
-              this.props.currentUser ? <Redirect to="/" /> : <Sign />}
+              this.props.currentUser ? <Redirect to="/" /> : <Sign />
+            }
           />
         </Switch>
       </div>
@@ -60,4 +62,4 @@ const MapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
 
-export default connect(mapStateToProps, MapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, MapDispatchToProps)(App));

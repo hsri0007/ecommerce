@@ -33,9 +33,11 @@ export default class Signup extends Component {
 
   render() {
     return (
-      <div className="formes">
-        <form onSubmit={this.onSubmit}>
-          <h1 style={{ textAlign: "center", padding: "50px" }}>signup</h1>
+      <div className="form">
+        <h2 style={{ textAlign: "center", margin: "20px", color: "black" }}>
+          signup
+        </h2>
+        <form onSubmit={this.onSubmit} className="forms">
           <input
             type="text"
             name="displayName"
@@ -43,6 +45,7 @@ export default class Signup extends Component {
             value={this.state.displayName}
             required
             placeholder="displayName"
+            className="inputs"
           />
           <input
             type="email"
@@ -51,6 +54,7 @@ export default class Signup extends Component {
             value={this.state.email}
             required
             placeholder="email"
+            className="inputs"
           />
           <input
             type="password"
@@ -59,8 +63,9 @@ export default class Signup extends Component {
             value={this.state.password}
             required
             placeholder="password"
+            className="inputs"
           />
-          <input type="submit" />
+          <input type="submit" className="submit-btn" />
         </form>
       </div>
     );

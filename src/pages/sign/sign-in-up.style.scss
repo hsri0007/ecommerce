@@ -3,7 +3,13 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  min-height: 85vh;
+  height: 90vh;
   width: 80%;
   margin: auto;
+}
+
+@media (max-width: 800px) {
+  .sign {
+    display: block;
+  }
 }

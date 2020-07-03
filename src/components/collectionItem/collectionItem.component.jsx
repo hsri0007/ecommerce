@@ -14,8 +14,12 @@ const collectionItem = ({ item, addItem }) => {
         }}
       />
       <div className="collection-footer">
-        <div className="name">{name}</div>
-        <div className="price">{price}</div>
+        <div className="name">
+          <p>{name}</p>
+        </div>
+        <div className="price">
+          <p>${price}</p>
+        </div>
       </div>
       <button className="c-button" onClick={() => addItem(item)}>
         Add to Cart

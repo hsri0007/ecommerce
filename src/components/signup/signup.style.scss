@@ -1,5 +1,32 @@
-.formes {
-  flex: 1;
-  border: 2px solid black;
-  padding: 20px 40px;
+.form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+
+  height: 50vh;
+
+  margin: auto;
+  .inputs {
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .submit-btn {
+    padding: 10px 0;
+    border: none;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    font-family: poppins;
+    letter-spacing: 3px;
+    border-radius: 25px;
+  }
 }

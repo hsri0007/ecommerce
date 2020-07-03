@@ -28,14 +28,17 @@ export default class signin extends Component {
   render() {
     return (
       <div className="form">
-        <h1 style={{ textAlign: "center", margin: "20px" }}>signIn</h1>
-        <form onSubmit={this.onSubmit} className="inputflex">
+        <h2 style={{ textAlign: "center", margin: "20px", color: "black" }}>
+          signIn
+        </h2>
+        <form onSubmit={this.onSubmit} className="forms">
           <input
             type="text"
             name="email"
             onChange={this.onChange}
             value={this.state.email}
             placeholder="email"
+            className="inputs"
           />
           <input
             type="password"
@@ -43,13 +46,15 @@ export default class signin extends Component {
             onChange={this.onChange}
             value={this.state.password}
             placeholder="password"
+            className="inputs"
           />
-          <div>
-            <input type="submit" />
+          <div className="submit">
+            <input type="submit" className="submit-btn" />
             <input
               type="button"
               value="sign in with google"
               onClick={signInWithGoogle}
+              className="submit-btn"
             />
           </div>
         </form>

@@ -32,7 +32,7 @@ const Check = ({ cartItem, clearItem, removeItem, addItem }) => {
         </div>
         <div className="price">
           {" "}
-          <h3>{price}</h3>
+          <h3>${price}</h3>
         </div>
         <div className="remove-button" onClick={() => clearItem(cartItem)}>
           <h3>x</h3>

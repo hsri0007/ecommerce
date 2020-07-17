@@ -38,7 +38,7 @@ const check = ({ cartItems, Total }) => (
       ))}
     </div>
     <div style={{ width: "100", display: "flex" }}>
-      <h3 style={{ marginLeft: "auto" }}>Total:{Total}</h3>
+      <h3 style={{ marginLeft: "auto" }}>Total:${Total}</h3>
     </div>
 
     <Buttonpay price={Total} />

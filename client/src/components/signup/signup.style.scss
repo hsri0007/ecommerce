@@ -3,30 +3,28 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin-right: 20px;
+  margin: 20px;
+  border-radius: 20px;
 }
 
 .forms {
   display: flex;
   flex-direction: column;
-
-  height: 50vh;
-
   margin: auto;
+  min-height: 45vh;
+  justify-content: space-evenly;
   .inputs {
     padding: 10px 0;
-    margin-bottom: 20px;
   }
-
   .submit-btn {
     padding: 10px 0;
     border: none;
-    background: rgb(0, 0, 0);
+    background: rgb(226, 174, 29);
     cursor: pointer;
     color: white;
     font-size: 2rem;
     font-family: poppins;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     border-radius: 25px;
   }
 }

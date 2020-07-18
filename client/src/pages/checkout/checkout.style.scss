@@ -30,3 +30,32 @@
     display: none;
   }
 }
+
+.emptycart {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  .empty-title {
+    color: blue;
+    font-size: 60px;
+  }
+  .empty-img {
+    object-fit: contain;
+    height: 250px;
+  }
+  @media (max-width: 800px) {
+    & {
+      flex-direction: column;
+    }
+    .empty-title {
+      color: blue;
+      font-size: 30px;
+    }
+    .empty-img {
+      object-fit: contain;
+      height: 150px;
+    }
+  }
+}

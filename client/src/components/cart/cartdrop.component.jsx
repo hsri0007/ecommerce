@@ -11,11 +11,13 @@ const Cartdrop = ({ cartItems, history, cartAction }) => {
   return (
     <div className="cart-drop">
       <div className="cart-menu">
-        {cartItems.length
-          ? cartItems.map((CartItem) => (
+        {cartItems.length ? (
+          cartItems.map((CartItem) => (
             <Cartitem key={CartItem.id} item={CartItem} />
           ))
-          : <p>empty</p>}
+        ) : (
+          <h1 className="empty">empty</h1>
+        )}
       </div>
       <button
         className="cart-button"
@@ -38,5 +40,5 @@ const mapDistpatchToprops = (dispatch) => ({
 });
 
 export default withRouter(
-  connect(mapStateToProps, mapDistpatchToprops)(Cartdrop),
+  connect(mapStateToProps, mapDistpatchToprops)(Cartdrop)
 );

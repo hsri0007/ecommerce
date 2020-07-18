@@ -20,10 +20,11 @@ class App extends Component {
 
   componentDidMount() {
     // const { setCurrentUseray } = this.props;
+    const { setCurrentUser } = this.props;
     this.unSubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         const userRef = await createUserProfile(user);
-        userRef.onSnapshot((snap) => {
+        userRef.get().then((snap) => {
           setCurrentUser({
             id: snap.id,
             ...snap.data(),
@@ -31,6 +32,7 @@ class App extends Component {
         });
       }
       setCurrentUser(user);
+
       // addCollectionDoc("collections", collectionArray);
     });
   }

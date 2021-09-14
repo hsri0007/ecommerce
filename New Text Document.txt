@@ -1,0 +1,29 @@
+import { useEffect, useState } from "react";
+import "./styles.css";
+
+export default function App() {
+  const [time, setTime] = useState(1 * 60);
+
+  const updateTime = () => {
+    setTime((prev) => prev > 1 && prev - 1);
+  };
+
+  useEffect(() => {
+    setInterval(updateTime, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (!time) {
+      alert("time out");
+    }
+  }, [time]);
+
+  return (
+    <div className="App">
+      <h1>Time Left</h1>
+      <h2>
+        {Math.floor(time / 60)}:{time % 60 <= 9 ? `0${time % 60}` : time % 60}
+      </h2>
+    </div>
+  );
+}

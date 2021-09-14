@@ -1,0 +1,28 @@
+
+google interview question
+
+Q)Take a random string which consists of number & string and split all strings and numbers inside an array or objects.
+
+
+my solution :-  
+
+const stringSplit = (str) => {
+  const spliter = str.split("");
+  const numbers = [];
+
+  const filterNum = (da) => {
+    if (da || da === 0) {
+      numbers.push(da);
+    }
+  };
+
+  for (let d of spliter) {
+    filterNum(+d);
+  }
+  const strings = spliter
+    .map((d) => (!numbers.includes(+d) ? d : null))
+    .filter((d) => d !== null);
+  return { strings, numbers };
+};
+
+console.log(stringSplit("df5f4g5g45gew4gew6g4weg6ew01g"));
